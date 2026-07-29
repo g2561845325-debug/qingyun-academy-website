@@ -9,7 +9,7 @@
  * "center center"、"50% 30%"、"left center" 等。
  */
 window.QINGYUN_MEDIA = {
-  version: "2026-07-24",
+  version: "2026-07-29",
 
   heroSlides: [
     {

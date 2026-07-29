@@ -20,12 +20,13 @@ const globalSections = {
   curriculum: {
     eyebrow: "Academics",
     title: "课程设置",
-    copy: "从 G7-G8 的学习基础，到凌云书院、个性化路径与 STEAM，形成连续而清晰的课程地图。",
+    copy: "从 G7-G8 学习基础与 AI School，到凌云书院、个性化路径与 STEAM，形成连续而清晰的课程地图。",
     page: "./curriculum.html",
     image: configuredImage("curriculum.hero", "./assets/images/p03-01.jpg"),
     imageAlt: configuredAlt("curriculum.hero", "青云书院项目学习课堂"),
     links: [
       ["青云书院初中部", "G7-G8 双语学术与导师支持", "./curriculum.html#sipc-middle"],
+      ["AI School", "AI 素养、独立判断与真实项目", "./curriculum.html#ai-school"],
       ["凌云书院", "G9X / G10X 国际课程衔接", "./curriculum.html#lingyun"],
       ["个性化路径", "One of School 一人一案", "./curriculum.html#qingyun"],
       ["STEAM", "科学探究、工程项目与作品展示", "./curriculum.html#stem"],

@@ -12,27 +12,27 @@ const heroSlides = [
   {
     image: "./assets/images/p01-01.jpg",
     eyebrow: {
-      zh: "Shenzhen Cyan Clouds Academy",
-      en: "Shenzhen Cyan Clouds Academy",
+      zh: "Qingyun AI School · Shenzhen",
+      en: "Qingyun AI School · Shenzhen",
     },
     title: {
-      zh: "青云书院初中部",
-      en: "Qingyun Academy Middle School",
+      zh: "在 AI 时代，学会提出更好的问题。",
+      en: "In the age of AI, learn to ask better questions.",
     },
     copy: {
-      zh: "在深圳，让初中三年的好奇心、表达力与自我管理，逐步沉淀为面向世界的学习底气。",
-      en: "In Shenzhen, curiosity, voice and self-management become foundations for learning in the world.",
+      zh: "让技术成为拓展思考的工具，让判断力、创造力与责任感始终属于学生自己。",
+      en: "Technology extends thinking. Judgement, creativity and responsibility remain deeply human.",
     },
-    cta: { zh: "了解更多", en: "Learn More" },
-    href: "./about.html",
+    cta: { zh: "探索 AI School", en: "Explore AI School" },
+    href: "./curriculum.html#ai-school",
   },
   {
     image: "./assets/images/p03-01.jpg",
     eyebrow: { zh: "Curriculum and Inquiry", en: "Curriculum and Inquiry" },
-    title: { zh: "课程不止于知识", en: "Learning Beyond Knowledge" },
+    title: { zh: "把问题变成作品，把作品带向真实世界。", en: "Turn questions into work for the real world." },
     copy: {
-      zh: "融合 CCSS 与爱德思 iLower Secondary，在阅读、概念、项目和表达中形成深度学习。",
-      en: "CCSS and Edexcel iLower Secondary meet through reading, concepts, projects and voice.",
+      zh: "在阅读、实验、代码、项目与公开表达中，让每一次学习都有过程，也有证据。",
+      en: "Reading, experiments, code, projects and public voice make both process and progress visible.",
     },
     cta: { zh: "查看课程体系", en: "View Curriculum" },
     href: "./curriculum.html",
@@ -581,7 +581,7 @@ Object.assign(menuData.zh, {
   middle: {
     eyebrow: "Academics",
     title: "课程设置",
-    copy: "青云书院初中部、凌云书院、One of School 与 STEM 项目彼此衔接，形成清晰而连续的学术路径。",
+    copy: "青云书院初中部、AI School、凌云书院与 One of School 彼此衔接，形成清晰而连续的学习路径。",
     items: [
       {
         title: "青云书院初中部",
@@ -589,6 +589,13 @@ Object.assign(menuData.zh, {
         previewTitle: "G7-G8 的学习基础",
         previewCopy: "课程结构、教学理念、学习成果与学生支持共同构成 G7-G8 的完整学习体验。",
         links: ["G7-G8 科目", "课程介绍", "学术标准", "导师支持"],
+      },
+      {
+        title: "AI School",
+        desc: "AI 素养、独立判断与真实项目共同进入每一个学科。",
+        previewTitle: "会使用工具，更会判断与负责",
+        previewCopy: "学生学习提出问题、核验来源、识别偏差、完成作品，并清楚说明 AI 如何参与。",
+        links: ["AI 学习方式", "学术诚信", "项目案例", "AI Fluency"],
       },
       {
         title: "凌云书院",
@@ -689,6 +696,7 @@ Object.assign(menuData.en, {
     copy: "Academics includes Qingyun Academy Middle School, Lingyun Academy, Qingyun Academy and STEM.",
     items: [
       { title: "Qingyun Academy Middle School", desc: "G7-G8 bilingual academics, projects, voice and advisory.", previewTitle: "Foundations for Grades 7-8", previewCopy: "Curriculum, learning beliefs, outcomes and student support form one complete middle school experience.", links: ["G7-G8 Subjects", "Courses", "Standards", "Advisory Support"] },
+      { title: "AI School", desc: "AI fluency, human judgement and authentic work across subjects.", previewTitle: "Use powerful tools with judgement", previewCopy: "Students ask, verify, recognise bias, create visible work and explain how AI contributed.", links: ["AI Learning", "Academic Integrity", "Projects", "AI Fluency"] },
       { title: "Lingyun Academy", desc: "G9X / G10X advanced transition into international study.", previewTitle: "Lingyun extends advanced learning", previewCopy: "Show learning goals, course directions, competitions and pathway preparation.", links: ["G9X", "G10X", "Pathway", "High School Bridge"] },
       { title: "Qingyun Academy", desc: "One of School personalised learning pathway.", previewTitle: "One learner, one pathway", previewCopy: "Mentors, projects and personalised plans help students shape a distinctive direction.", links: ["Personal Plan", "Mentors", "Projects", "One of School"] },
       { title: "STEM", desc: "Scientific inquiry, engineering design, technology and interdisciplinary projects.", previewTitle: "STEM creates visible evidence", previewCopy: "Science, maths, engineering, technology and presentation connect through real problems.", links: ["Inquiry", "Engineering", "Showcase", "Competition Learning"] },
@@ -723,6 +731,10 @@ Object.assign(linkTargets, {
   "全人教育": "./about.html#whole-person",
   "使命愿景": "./about.html#whole-person",
   "课程介绍": "./curriculum.html#sipc-middle",
+  "AI School": "./curriculum.html#ai-school",
+  "AI 学习方式": "./curriculum.html#ai-school",
+  "学术诚信": "./curriculum.html#ai-school",
+  "AI Fluency": "./curriculum.html#ai-school",
   "G7-G8 科目": "./curriculum.html#sipc-middle",
   "学术标准": "./curriculum.html#sipc-middle",
   "学生支持": "./faculty.html",
@@ -805,6 +817,8 @@ Object.assign(linkTargets, {
   Wellbeing: "./about.html#whole-person",
   "Whole-Person Pathway": "./about.html#whole-person",
   STEM: "./curriculum.html#stem",
+  "AI Learning": "./curriculum.html#ai-school",
+  "Academic Integrity": "./curriculum.html#ai-school",
   "Qingyun Academy Middle School": "./curriculum.html#sipc-middle",
   "Lingyun Academy": "./curriculum.html#lingyun",
   "Qingyun Academy": "./curriculum.html#qingyun",
@@ -886,6 +900,9 @@ const programmesSection = document.querySelector("#programmes");
 const learningPreviewImage = document.querySelector("#learningPreviewImage");
 const learningPreviewCaption = document.querySelector("#learningPreviewCaption");
 const learningSteps = [...document.querySelectorAll(".learning-system-flow article")];
+const aiSchoolImage = document.querySelector("#aiSchoolImage");
+const aiSchoolCaption = document.querySelector("#aiSchoolCaption");
+const aiSchoolSteps = [...document.querySelectorAll(".ai-school-step")];
 let heroTimer = null;
 let lastFocusedElement = null;
 
@@ -959,6 +976,18 @@ function startHeroCarousel() {
 
 function stopHeroCarousel() {
   window.clearInterval(heroTimer);
+}
+
+function activateAISchoolStep(step) {
+  if (!step || !aiSchoolImage || !aiSchoolCaption) return;
+  aiSchoolSteps.forEach((item) => item.classList.toggle("is-active", item === step));
+  aiSchoolImage.classList.add("is-changing");
+  aiSchoolImage.src = step.dataset.image;
+  aiSchoolCaption.textContent = step.dataset[`caption${state.lang === "zh" ? "Zh" : "En"}`];
+  const index = aiSchoolSteps.indexOf(step) + 1;
+  const label = aiSchoolCaption.previousElementSibling;
+  if (label) label.textContent = `AI School · ${String(index).padStart(2, "0")}`;
+  window.setTimeout(() => aiSchoolImage.classList.remove("is-changing"), 260);
 }
 
 function renderPreview(item) {
@@ -1102,6 +1131,8 @@ function setLanguage(lang) {
   if (activeLearningStep && learningPreviewCaption) {
     learningPreviewCaption.textContent = activeLearningStep.dataset[`caption${lang === "zh" ? "Zh" : "En"}`];
   }
+  const activeAIStep = aiSchoolSteps.find((step) => step.classList.contains("is-active")) || aiSchoolSteps[0];
+  if (activeAIStep) activateAISchoolStep(activeAIStep);
 }
 
 navTriggers.forEach((trigger) => {
@@ -1152,6 +1183,11 @@ hero.addEventListener("mouseenter", stopHeroCarousel);
 hero.addEventListener("mouseleave", startHeroCarousel);
 hero.addEventListener("focusin", stopHeroCarousel);
 hero.addEventListener("focusout", startHeroCarousel);
+
+aiSchoolSteps.forEach((step) => {
+  step.addEventListener("click", () => activateAISchoolStep(step));
+  step.addEventListener("focus", () => activateAISchoolStep(step));
+});
 
 function closeMobile(shouldRestoreFocus = true) {
   const wasOpen = mobilePanel.classList.contains("is-open");
@@ -1317,7 +1353,7 @@ const observer = new IntersectionObserver(
 
 document
   .querySelectorAll(
-      ".arrival-story, .principal-editorial, .identity-current, .concordia-section, .learning-system, .school-rhythm, .visual-mosaic, .basis-spotlight, .curriculum, .detail-section, .academies-section, .community-section, .student-voices, .video-section, .campus-lens, .campus-journal, .tuition-section, .apply-section, .admissions-detail, .faq-section, .site-footer"
+      ".ai-school-home, .principal-editorial, .identity-current, .concordia-section, .learning-system, .school-rhythm, .visual-mosaic, .basis-spotlight, .curriculum, .detail-section, .academies-section, .community-section, .student-voices, .video-section, .campus-lens, .campus-journal, .tuition-section, .apply-section, .admissions-detail, .faq-section, .site-footer"
   )
   .forEach((node) => node.classList.add("reveal"));
 
