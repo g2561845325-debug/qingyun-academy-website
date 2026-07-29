@@ -1,0 +1,30 @@
+name: Import complete Qingyun Academy website source
+
+on:
+  push:
+    paths:
+      - '.github/workflows/unpack.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Expand the complete website source
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f qingyun-source-package.zip
+          unzip -o qingyun-source-package.zip
+          rm qingyun-source-package.zip
+          rm -f .github/workflows/unpack.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Import complete Qingyun Academy website source"
+          git push
