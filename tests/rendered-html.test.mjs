@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { access, readFile } from "node:fs/promises";
+import { access, readFile, readdir } from "node:fs/promises";
 import test from "node:test";
 
 async function render() {
@@ -35,43 +35,42 @@ test("server renders the Qingyun Academy entry page", async () => {
   assert.match(html, /进入青云书院初中部官网/);
 });
 
-test("ships every public page and the shared media configuration", async () => {
-  const publicFiles = [
-    "index.html",
-    "about.html",
-    "faculty.html",
-    "curriculum.html",
-    "academies.html",
-    "admissions.html",
-    "fees.html",
-    "life.html",
+test("ships every public page and the shared navigation system", async () => {
+  const publicDirectory = new URL("../public/", import.meta.url);
+  const htmlFiles = (await readdir(publicDirectory)).filter((file) =>
+    file.endsWith(".html"),
+  );
+
+  assert.equal(htmlFiles.length, 53);
+
+  const sharedFiles = [
     "styles.css",
     "editorial.css",
+    "navigation-v2.css",
+    "detail-pages.css",
     "script.js",
     "subpage.js",
+    "unified-nav.js",
+    "detail-pages.js",
     "content/media-config.js",
     "content/media-runtime.js",
   ];
 
   await Promise.all(
-    publicFiles.map((file) =>
-      access(new URL(`../public/${file}`, import.meta.url)),
-    ),
+    sharedFiles.map((file) => access(new URL(`../public/${file}`, import.meta.url))),
   );
 
-  const [home, mediaConfig] = await Promise.all([
+  const [home, detailPage, mediaConfig] = await Promise.all([
     readFile(new URL("../public/index.html", import.meta.url), "utf8"),
-    readFile(
-      new URL("../public/content/media-config.js", import.meta.url),
-      "utf8",
-    ),
+    readFile(new URL("../public/ai-school.html", import.meta.url), "utf8"),
+    readFile(new URL("../public/content/media-config.js", import.meta.url), "utf8"),
   ]);
 
   assert.match(home, /青云书院初中部/);
-  assert.match(home, /关于我们/);
-  assert.match(home, /课程设置/);
-  assert.match(home, /招生入学/);
-  assert.match(home, /校园生活/);
+  assert.match(home, /校长寄语/);
+  assert.match(home, /unified-nav\.js/);
+  assert.match(detailPage, /AI School/);
+  assert.match(detailPage, /detail-pages\.js/);
   assert.match(mediaConfig, /window\.QINGYUN_MEDIA/);
   assert.match(mediaConfig, /heroSlides/);
   assert.match(mediaConfig, /campusVideo/);
