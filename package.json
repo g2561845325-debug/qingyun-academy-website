@@ -10,6 +10,7 @@
     "build": "vinext build",
     "start": "vinext start",
     "generate:pages": "node scripts/generate-detail-pages.mjs",
+    "sync:github-pages": "node scripts/sync-github-pages.mjs",
     "check:links": "node scripts/check-links.mjs",
     "test": "vinext build && node scripts/check-links.mjs && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
