@@ -4,8 +4,8 @@
 
 - **当前完整网站源码：[`public/`](./public/)**
 - **GitHub Pages 发布副本：[`docs/`](./docs/)**
-- 在线预览：https://cyancloudsacademy.wenyu528.chatgpt.site
-- 学校域名：https://cyancloudsacademy.com
+- 在线预览：https://cyancloudsacademy.wenyu528.chatgpt.site](https://g2561845325-debug.github.io/qingyun-academy-website/)
+- 学校域名：ccacademy.net.cn
 - 技术形态：静态 HTML / CSS / JavaScript + vinext 发布外壳
 
 > `public/` 是唯一编辑源。`docs/` 是从 `public/` 自动生成的完整副本，用于 GitHub Pages，请不要单独修改。
