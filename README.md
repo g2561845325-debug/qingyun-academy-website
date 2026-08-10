@@ -4,7 +4,7 @@
 
 - **当前完整网站源码：[`public/`](./public/)**
 - **GitHub Pages 发布副本：[`docs/`](./docs/)**
-- 在线预览：https://cyancloudsacademy.wenyu528.chatgpt.site](https://g2561845325-debug.github.io/qingyun-academy-website/)
+- 在线预览：[https://cyancloudsacademy.wenyu528.chatgpt.site](https://g2561845325-debug.github.io/qingyun-academy-website/)](https://g2561845325-debug.github.io/qingyun-academy-website/)
 - 学校域名：ccacademy.net.cn
 - 技术形态：静态 HTML / CSS / JavaScript + vinext 发布外壳
 
